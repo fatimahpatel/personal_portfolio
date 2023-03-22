@@ -1,5 +1,5 @@
 import {Navbar, Container} from "react-boostrap"
-import {useState} from "react";
+import {useState, useEffect} from "react";
 
 
 
@@ -7,13 +7,35 @@ export const NavBar = () =>{
 
     // To manage what link we are on - we create a class that will hold this information 
     const [activeLink, setActiveLink] = useState('home');
-    
 
+    // detect when the user is scrolling and change colour of background
+    //to keep the information on whether or not the user has scrolled, we create a new state
+    const[scrolled, setScrolled] = useState(false);
+
+    //create a useEffect to determine if it's been scrolled or not 
+    //useEffect is triggered once the user starts scrolling
+
+    useEffect(() =>{
+        const onScroll = () =>{
+            //window.scrollY - if the height of how much has been scrolled is more than 50 pixels
+            if (window.scrollY >50){
+                setScrolled(true);
+            }else {
+                setScrolled(false);
+            }
+        }
+        //execute onScroll function when the user is scrolling
+        window.addEventListener("scroll", onScroll);
+
+        //remove eventlistener when component is removed from dom 
+        return () => window.removeEventListener("scroll", onScroll)
+    }, [])
 
 
 
   return (
-    <Navbar expand="lg">
+    // className based on what condition scrollY is at
+    <Navbar expand="lg" className={scrolled ? "scrolled": ""}>
       <Container>
         <Navbar.Brand href="#home">
             <img src = {''} alt = "logo"/>
