@@ -1,13 +1,17 @@
 import {Navbar, Container} from "react-boostrap"
+import {useState} from "react";
+
+
+
 export const NavBar = () =>{
 
-    return (
-        import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+    // To manage what link we are on - we create a class that will hold this information 
+    const [activeLink, setActiveLink] = useState('home');
+    
 
-function BasicExample() {
+
+
+
   return (
     <Navbar expand="lg">
       <Container>
@@ -28,19 +32,15 @@ function BasicExample() {
           </Nav>
           <span className="navbar-text">
             <div className="social-icons">
-                <a href="https://twitter.com/FatimahwithaH"><img src={} alt=""/></a>
-                <a href="https://twitter.com/FatimahwithaH"><img src={} alt=""/></a>
-                <a href="https://twitter.com/FatimahwithaH"><img src={} alt=""/></a>
+                <a href="https://twitter.com/FatimahwithaH"><img src={''} alt=""/></a>
+                <a href="https://twitter.com/FatimahwithaH"><img src={''} alt=""/></a>
+                <a href="https://twitter.com/FatimahwithaH"><img src={''} alt=""/></a>
             </div>
-            <button className="contact-us-button" onClick={() => console.log('connect')}/><span>Let's Connect</span>
+            <button className="contact-us-button" onClick={() => console.log('connect')}><span>Let's Connect</span></button>
           </span>
         </Navbar.Collapse>
       </Container>
     </Navbar>
-  );
-}
 
-export default BasicExample;
-    )
-
+  )
 }
