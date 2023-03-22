@@ -23,9 +23,17 @@ function BasicExample() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-        
+            <Nav.Link href="#about-me">About-Me</Nav.Link>
+            <Nav.Link href="#projects">Projects</Nav.Link>
           </Nav>
+          <span className="navbar-text">
+            <div className="social-icons">
+                <a href="https://twitter.com/FatimahwithaH"><img src={} alt=""/></a>
+                <a href="https://twitter.com/FatimahwithaH"><img src={} alt=""/></a>
+                <a href="https://twitter.com/FatimahwithaH"><img src={} alt=""/></a>
+            </div>
+            <button className="contact-us-button" onClick={() => console.log('connect')}/><span>Let's Connect</span>
+          </span>
         </Navbar.Collapse>
       </Container>
     </Navbar>
