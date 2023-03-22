@@ -32,6 +32,11 @@ export const NavBar = () =>{
     }, [])
 
 
+    const onUpdateActiveLink = (value) => {
+        setActiveLink(value);
+    }
+
+
 
   return (
     // className based on what condition scrollY is at
@@ -48,9 +53,9 @@ export const NavBar = () =>{
          
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#about-me">About-Me</Nav.Link>
-            <Nav.Link href="#projects">Projects</Nav.Link>
+            <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link': 'navbar-link'} onClick={()=> onUpdateActiveLink('home')}>Home</Nav.Link>
+            <Nav.Link href="#about-me" className={activeLink === 'about-me' ? 'active navbar-link': 'navbar-link'} onClick={()=> onUpdateActiveLink('about-me')}>About-Me</Nav.Link>
+            <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link': 'navbar-link'} onClick={()=> onUpdateActiveLink('projects')}>Projects</Nav.Link>
           </Nav>
           <span className="navbar-text">
             <div className="social-icons">
