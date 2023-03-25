@@ -8,6 +8,7 @@ export const Banner = () => {
     // For the Animation, we have to store the different states 
 
     // Also need to have a useEffect hook to detect when we are typing or deleting animation
+    const toRotate = ["Full stack Engineer", "Web Developer", "Java Developer"];
 
     return(
         <section className="banner" id="home">
