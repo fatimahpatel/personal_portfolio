@@ -289,7 +289,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   line-height: 1.5em;
   width: 96%;
 }
-.banner button {
+
+/*below is for the lets connect button*/
+.banner button { 
   color: #fff;
   font-weight: 700;
   font-size: 20px;
@@ -304,12 +306,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   transition: 0.3s ease-in-out;
   line-height: 1;
 }
+/*arrow moves*/
 .banner button:hover svg {
   margin-left: 25px;
 }
+
 .banner img {
   animation: updown 3s linear infinite;
 }
+/*this is for the astronaut bouncing up and down*/
 @keyframes updown {
     0% {
         transform: translateY(-20px);

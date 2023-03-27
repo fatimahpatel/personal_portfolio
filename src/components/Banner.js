@@ -8,7 +8,7 @@ export const Banner = () => {
     // For the Animation, we have to store the different states 
 
     const toRotate = ["Full stack Engineer", "Web Developer", "Java Developer"];
-    // Also need to have a useEffect hook to detect when we are typing or deleting animation
+
     // loopNumb indicates index which word is currently displayed on the screen.
     const[loopNum, setLoopNum] = useState(0);
     // isDeleting indicates which word is being deleted aka typed out
@@ -21,7 +21,7 @@ export const Banner = () => {
     //amount of time for transition between each word 
     const period = 2000;
 
-    //this function will be responsible for typing and deleting
+    //this function will be responsible for typing and deleting animation
      //this useEffect will run everytime the text gets updated
     useEffect(() => {
         //the interval which the text will be updated
