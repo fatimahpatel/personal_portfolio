@@ -26,6 +26,21 @@ export const Projects = () => {
                     <Col>
                         <h2>Projects</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <Tab.Container id="projects-tabs" defaultActiveKey="first">
+                        <Nav variant="pills" defaultActiveKey="/home">
+                            <Nav.Item>
+                                <Nav.Link eventKey="first">Tab one</Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link eventKey="second">Tab two</Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link eventKey="third">
+                                Disabled
+                                </Nav.Link>
+                            </Nav.Item>
+                        </Nav>
+                        </Tab.Container>
                     </Col>
                 </Row>
             </Container>
