@@ -1,4 +1,7 @@
-import { Col } from "react-bootstrap";
+import { Col, TabContent, Row, Tab, Container, Nav} from "react-bootstrap";
+import projImg1 from '../assets/img/project-img1.png';
+import projImg2 from '../assets/img/project-img2.png';
+import projImg3 from '../assets/img/project-img3.png';
 
 export const Projects = () => {
     //this const will hold information about the projects
@@ -27,6 +30,8 @@ export const Projects = () => {
                         <h2>Projects</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         <Tab.Container id="projects-tabs" defaultActiveKey="first">
+                            {/* code with nav tags from react bootstrap website */}
+                            {/* Nav.Item is each navigation item */}
                         <Nav variant="pills" defaultActiveKey="/home">
                             <Nav.Item>
                                 <Nav.Link eventKey="first">Tab one</Nav.Link>
@@ -40,6 +45,21 @@ export const Projects = () => {
                                 </Nav.Link>
                             </Nav.Item>
                         </Nav>
+                        <TabContent>
+                            <Tab.Pane eventKey="first">
+                                <Row>
+                                    {
+                                    projects.map((project, index) =>{
+                                        return(
+                                            <p>{project.title}</p>
+                                        )
+                                    })
+                                    }
+                                </Row>
+                            </Tab.Pane>
+                            <Tab.Pane eventKey="second">Lorem ipsum dolor</Tab.Pane>
+                            <Tab.Pane eventKey="third">Lorem ipsum dolor</Tab.Pane>
+                        </TabContent>
                         </Tab.Container>
                     </Col>
                 </Row>
