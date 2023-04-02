@@ -34,7 +34,7 @@ export const Projects = () => {
                         <Tab.Container id="projects-tabs" defaultActiveKey="first">
                             {/* code with nav tags from react bootstrap website */}
                             {/* Nav.Item is each navigation item */}
-                        <Nav variant="pills" defaultActiveKey="/home">
+                        <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                             <Nav.Item>
                                 <Nav.Link eventKey="first">Tab one</Nav.Link>
                             </Nav.Item>
@@ -69,7 +69,7 @@ export const Projects = () => {
                     </Col>
                 </Row>
             </Container>
-            <img className="background-image-right" img={colorSharp2}/>
+            <img className="background-image-right" src={colorSharp2}></img>
         </section>
     )
 }
