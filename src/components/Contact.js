@@ -1,4 +1,5 @@
  import { useState } from "react";
+ import { Container, Row, Col } from "react-bootstrap";
 export const Contact = () => {
 
     
@@ -17,5 +18,14 @@ export const Contact = () => {
     //status is for when we make the api call afterwards, whether or not we get error message or message has been sent successfully
     const[status, setStatus] = useState({});
 
-    
+    return(
+        <section className="contact" id="connect">
+            <Container>
+                <Row className="align-items-center">
+                    <Col md={6}>
+                    </Col>
+                </Row>
+            </Container>
+        </section>
+    )
 }
