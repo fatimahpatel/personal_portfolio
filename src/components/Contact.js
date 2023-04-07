@@ -27,6 +27,11 @@ export const Contact = () => {
         })
     }
 
+    //to send this information, we need to use a mail server (node mailer)
+    const handleSubmit = () => {
+
+    }
+
     return(
         <section className="contact" id="connect">
             <Container>
@@ -36,7 +41,7 @@ export const Contact = () => {
                     </Col>
                     <Col md={6}>
                         <h2>Get in Touch</h2>
-                        <form>
+                        <form onSubmit={handleSubmit}>
                             <Row>
                                 <Col sm={6} className="px-1">
                                     <input type="text" value={formDetails.firstName} placeholder="First Name" onChange={(e)=>onFormUpdate('firstName', e.target.value)}/>
